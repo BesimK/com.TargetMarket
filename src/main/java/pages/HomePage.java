@@ -7,11 +7,11 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "(//a[@href='/'])[1]")
     private WebElement inarAcademyImage;
 
-    @FindBy(linkText = "Webautomation")
-    private WebElement webAutomationLink;
+    @FindBy(linkText = "Target Market")
+    private WebElement targetMarketLink;
 
-    public void clickOnWebAutomationLink() {
-        webAutomationLink.click();
+    public void clickOnTargetMarketLink() {
+        targetMarketLink.click();
     }
 
     public void clickInarAcademyImageLink(){
