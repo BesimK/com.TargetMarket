@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
  * 5. Click. The login button
  * Verification login functions properly
  */
+//REPORTER PLUGIN BUST BE ADDED TO POM.XML!!!
 public class TC_001_LP_001 extends Hooks{
 
     @Test
