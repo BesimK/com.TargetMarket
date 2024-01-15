@@ -2,15 +2,54 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.BrowserUtils;
+import utils.JSUtils;
 
-public class TargetMarketHomePage extends BasePage{
-    @FindBy(xpath = "//h5[@class=\"display-5\"]")
-    private WebElement welcomeText;
+import java.util.List;
 
-    @FindBy(xpath = "//button[text()=\"Logout\"]")
-    private WebElement logoutButton;
+public class TargetMarketHomePage extends BasePage {
 
-    public void clickLogoutButton(){
-        logoutButton.click();
-    }
+	@FindBy(xpath = "//h5[@class=\"display-5\"]")
+	private WebElement welcomeText;
+	@FindBy(xpath = "//button[text()=\"Logout\"]")
+	private WebElement logoutButton;
+	@FindBy(xpath = "(//ul[@id=\"splide02-list\"]/li)")
+	private List<WebElement> tabs;
+	@FindBy(xpath = "(//ul[@id=\"splide02-list\"])")
+	private WebElement slideList;
+	@FindBy(xpath = "//span[@class=\"cart-badge m-0 mt-1 badge rounded-pill bg-danger\"]")
+	private WebElement cartCounter;
+	@FindBy(xpath = "//button[text()=\"Go to Checkout\"]")
+	private WebElement goToCheckoutButton;
+	@FindBy(xpath = "//button[@aria-label=\"Close\"]")
+	private WebElement closeDialogButton;
+	@FindBy(xpath = "(//h1)[1]")
+	private WebElement checkOutMessage;
+
+	public void clickLogoutButton() {
+		logoutButton.click();
+	}
+
+	public void swipeTabsLeft(){
+		JSUtils.executeJS("arguments[0].setAttribute('style','transform: translateX(-285px);')", slideList);
+		BrowserUtils.wait(2.0);
+	}
+	public void clickWomenDresses(){
+		tabs.get(8).click();
+	}
+	public String getTextFromCartCounter(){
+		return cartCounter.getText();
+	}
+	public void clickCartButton(){
+		cartCounter.click();
+	}
+	public void clickGoToCheckoutButton(){
+		goToCheckoutButton.click();
+	}
+	public String getCheckoutMessage(){
+		return checkOutMessage.getText();
+	}
+	public void clickCloseDialogButton(){
+		closeDialogButton.click();
+	}
 }

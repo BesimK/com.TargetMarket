@@ -20,12 +20,14 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.7.1</version>
+            <version>7.9.0</version>
             <scope>test</scope>
         </dependency>
+
 
     </dependencies>
 
@@ -34,16 +36,25 @@
         <!-- Plugins Section: Defines plugins used during the build process. -->
         <plugins>
             <!-- Maven Compiler Plugin: Compiles the source code of the project. -->
-            <plugin>
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <!-- Ensures compatibility with Java 17. -->
+                    &lt;!&ndash; Ensures compatibility with Java 17. &ndash;&gt;
                     <release>17</release>
                 </configuration>
+            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.3</version>
+                <configuration>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </configuration>
             </plugin>
-
             <!-- Maven Surefire Plugin: Used for running unit tests. -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
