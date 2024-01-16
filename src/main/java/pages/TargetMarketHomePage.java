@@ -19,6 +19,8 @@ public class TargetMarketHomePage extends BasePage {
 	private WebElement slideList;
 	@FindBy(xpath = "//span[@class=\"cart-badge m-0 mt-1 badge rounded-pill bg-danger\"]")
 	private WebElement cartCounter;
+	@FindBy(xpath = "//div[text()=\"Product added to cart!\"]")
+	private WebElement addedToCartDialogue;
 	@FindBy(xpath = "//button[text()=\"Go to Checkout\"]")
 	private WebElement goToCheckoutButton;
 	@FindBy(xpath = "//button[@aria-label=\"Close\"]")
@@ -36,6 +38,9 @@ public class TargetMarketHomePage extends BasePage {
 	}
 	public void clickWomenDresses(){
 		tabs.get(8).click();
+	}
+	public boolean addedToCartDialogueIsDisplayed(){
+		return addedToCartDialogue.isDisplayed();
 	}
 	public String getTextFromCartCounter(){
 		return cartCounter.getText();

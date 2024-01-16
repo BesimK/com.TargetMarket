@@ -31,8 +31,11 @@ public class WomenDressesPage extends BasePage{
             }
         }
     }
-    public void clickAddToCartButton(){
-        Driver.getDriver().findElement(By.xpath("(//button[text()=\"Add to Cart\"])[1]")).click();
+    public void clickAddToCartButton(int productIndex){
+        for(int c = (productIndex+1)/5;c>0;c/=5){
+            BrowserUtils.scrollDownWithPageDown();
+        }
+        addToCartButtons.get(productIndex-1).click();
     }
     public boolean checkNotification(){
         return notificationForCart.isDisplayed();
