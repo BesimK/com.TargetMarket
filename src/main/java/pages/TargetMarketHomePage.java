@@ -7,6 +7,7 @@ import utils.JSUtils;
 
 import java.util.List;
 
+
 public class TargetMarketHomePage extends BasePage {
 
 	@FindBy(xpath = "//h5[@class=\"display-5\"]")
@@ -56,5 +57,10 @@ public class TargetMarketHomePage extends BasePage {
 	}
 	public void clickCloseDialogButton(){
 		closeDialogButton.click();
+	}
+
+
+	public void clickTopsPageLink() {
+		tabs.get(7).click();
 	}
 }
