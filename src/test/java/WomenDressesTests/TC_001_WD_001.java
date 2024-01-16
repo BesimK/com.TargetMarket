@@ -2,58 +2,76 @@ package WomenDressesTests;
 
 import BaseTest.Hooks;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
 /**
- * 1. Launch the application
- * 2. Navigate to the Target Market
- * 3. Use login data with standard_user
- * 4. Use password data with secret_password
- * 5. Click. The login button
- * Verification login functions properly
+ * 1. Open Browser, Navigate and Login to Target Market
+ * 2. Click on Women Dresses Tab
+ * 3. Add One Item to Cart
+ * 4. Assert Product Added to Cart Dialogue is Displayed
+ * 5. Assert Cart Counter
+ * 6. Click On Cart Button
+ * 7. Click On Checkout
+ * 8. Place Order with Valid Credentials
+ * 9. Assert Successful Order Placement Dialogue at Home Page
+ * 10. Assert Cart counter is 0
+ * 11. Scroll Up
  */
-// REPORTER PLUGIN BUST BE ADDED TO POM.XML!!!
-// POM.XML MUST BE REVISED!!!
 public class TC_001_WD_001 extends Hooks {
 
-	@Test
-	void womenDressSingleProduct() {
+	@Test(dataProvider = "productsInWomenDressesPage")
+	void womenDressSingleProduct(int productIndex) {
+		//1. Open Browser, Navigate and Login to Target Market
 		BrowserUtils.wait(2.0);
 		//Scroll
 		BrowserUtils.scrollDownWithPageDown();
+
+		//2. Click on Women Dresses Tab
 		//Swipe Tabs
 		pages.getTargetMarketHomePage().swipeTabsLeft();
 		//Click Women Dresses
 		pages.getTargetMarketHomePage().clickWomenDresses();
 		//Get to new Tab;
 		BrowserUtils.scrollDownWithPageDown();
+
+		//3. Add One Item to Cart
 		//Click Add to cart Button
-		pages.getWomenDressesPage().clickAddToCartButton();
-		/*try{
-			//Buttons start with 1
-			pages.getWomenDressesPage().clickAddToCartButton(1,2,3);
-		}catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException){
-			Assert.fail("There is not that much product");
-		}catch (Exception exception){
-			Assert.fail("Added to cart notification isn't shown");
-		}*/
+		pages.getWomenDressesPage().clickAddToCartButton(productIndex);
+
+		//Assert Product Added to Cart Dialogue is displayed
+		boolean result = pages.getTargetMarketHomePage().addedToCartDialogueIsDisplayed();
+		Assert.assertTrue(result);
+
+		//Assert Cart Counter Is Working Properly
 		String actual = pages.getTargetMarketHomePage().getTextFromCartCounter();
 		String expected ="1";
 		Assert.assertEquals(actual,expected);
+
 		//Click Cart Button
 		pages.getTargetMarketHomePage().clickCartButton();
+
 		//Click Go to check out button
 		pages.getTargetMarketHomePage().clickGoToCheckoutButton();
 		BrowserUtils.wait(2.0);
 
+		//Place Order
 		pages.getCheckoutPage().checkOut();
 		BrowserUtils.wait(2.0);
+
+		//Assert Check Out Message
 		actual = pages.getTargetMarketHomePage().getCheckoutMessage();
 		expected = "Thanks!";
 		Assert.assertEquals(actual,expected);
 		pages.getTargetMarketHomePage().clickCloseDialogButton();
-		BrowserUtils.scrollUpWithPageUp();
+
+		//Return to HomePage navigate to Target Market
+
 	}
 
+	@DataProvider (name = "productsInWomenDressesPage")
+	private Object[] dataProvider(){
+		return new Object[]{1,2,3,4,5};
+	}
 }

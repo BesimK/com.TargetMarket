@@ -14,6 +14,10 @@ public class BrowserUtils {
 		actions.keyDown(Keys.PAGE_DOWN).release().build().perform();
 		wait(2.0);
 	}
+	public static void pressHomeButton(){
+		actions.keyDown(Keys.HOME).release().build().perform();
+		wait(2.0);
+	}
 
 	public static void scrollVertically(int pixelAmount) {
 		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
