@@ -9,10 +9,13 @@ import utils.Driver;
 import java.util.List;
 
 public class WomenDressesPage extends BasePage{
+
     @FindBy(xpath = "//button[text()=\"Add to Cart\"]")
     private List<WebElement> addToCartButtons;
+
     @FindBy(xpath ="(//button[text()=\"Add to Cart\"])[1]")
     private WebElement firstAddToCartButton;
+
     @FindBy(xpath = "//div[text()=\"Product added to cart!\"]")
     private WebElement notificationForCart;
 
@@ -31,8 +34,9 @@ public class WomenDressesPage extends BasePage{
             }
         }
     }
+
     public void clickAddToCartButton(int productIndex){
-        for(int c = (productIndex+1)/5;c>0;c/=5){
+        for(int c = productIndex/5;c>0;c/=5){
             BrowserUtils.scrollDownWithPageDown();
         }
         addToCartButtons.get(productIndex-1).click();
