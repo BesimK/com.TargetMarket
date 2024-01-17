@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utils.BrowserUtils;
+import utils.Driver;
 
 /**
  * 1. Open Browser, Navigate and Login to Target Market
@@ -67,6 +68,9 @@ public class TC_001_WD_001 extends Hooks {
 		pages.getTargetMarketHomePage().clickCloseDialogButton();
 
 		//Return to HomePage navigate to Target Market
+		Driver.getDriver().get("https://InarAcademy:Fk160621.@test.inar-academy.com");
+		pages.getHomePage().clickOnTargetMarketLink();
+		BrowserUtils.pressHomeButton();
 
 	}
 
