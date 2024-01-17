@@ -25,7 +25,7 @@ public class TargetMarketHomePage extends BasePage {
 	private WebElement cartCounter;
 
 	@FindBy(xpath = "//div[text()=\"Product added to cart!\"]")
-	private WebElement addedToCartDialogue;
+	private WebElement notificationForCart;
 
 	@FindBy(xpath = "//button[text()=\"Go to Checkout\"]")
 	private WebElement goToCheckoutButton;
@@ -38,6 +38,8 @@ public class TargetMarketHomePage extends BasePage {
 
 	@FindBy(linkText = "target-market")
 	private WebElement logo;
+	@FindBy(xpath = "//button[@class=\"btn btn-danger fs-3 w-100\"]")
+	private List<WebElement> addToCartButtons;
 
 
 	public void clickLogoutButton() {
@@ -49,12 +51,16 @@ public class TargetMarketHomePage extends BasePage {
 		BrowserUtils.wait(2.0);
 	}
 
-	public void clickWomenDresses(){
-		tabs.get(8).click();
+	public void clickTab(int tabIndex){
+		BrowserUtils.scrollDownWithPageDown();
+		if(tabIndex>7) {
+			swipeTabsLeft();
+		}
+		tabs.get(tabIndex).click();
 	}
 
 	public boolean addedToCartDialogueIsDisplayed(){
-		return addedToCartDialogue.isDisplayed();
+		return notificationForCart.isDisplayed();
 	}
 
 	public String getTextFromCartCounter(){
@@ -67,6 +73,7 @@ public class TargetMarketHomePage extends BasePage {
 
 	public void clickGoToCheckoutButton(){
 		goToCheckoutButton.click();
+		BrowserUtils.wait(2.0);
 	}
 
 	public String getCheckoutMessage(){
@@ -83,5 +90,30 @@ public class TargetMarketHomePage extends BasePage {
 
 	public void clickLogoToRefresh(){
 		logo.click();
+	}
+
+	public void clickAddToCartButton(int... buttons) throws Exception {
+		BrowserUtils.scrollDownWithPageDown();
+		int scrollCounter;
+		for(int button:buttons){
+			scrollCounter = 0;
+			for(int c = (button-1)/4;c>0;c--){
+				BrowserUtils.scrollDownWithPageDown();
+				++scrollCounter;
+			}
+			addToCartButtons.get(button-1).click();
+			BrowserUtils.wait(1.5);
+			if(!checkNotification()){
+				throw new Exception();
+			}
+			BrowserUtils.wait(2.0);
+			for (int j = 0; j < scrollCounter; j++) {
+				BrowserUtils.scrollUpWithPageUp();
+			}
+		}
+	}
+
+	public boolean checkNotification(){
+		return notificationForCart.isDisplayed();
 	}
 }

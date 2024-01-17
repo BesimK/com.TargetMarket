@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import utils.BrowserUtils;
 import utils.Driver;
 import utils.Pages;
 
@@ -22,6 +23,7 @@ public class Hooks {
 		}
 		pages.getHomePage().clickOnTargetMarketLink();
 		pages.getTargetMarketLoginPage().login("standard_user","secret_password");
+		BrowserUtils.wait(2.0);
 	}
 
 	@AfterSuite
