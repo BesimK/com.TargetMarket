@@ -35,6 +35,7 @@ public class CheckoutPage extends BasePage{
         BrowserUtils.scrollDownWithPageDown();
         BrowserUtils.wait(2.0);
         submitButton.click();
+        BrowserUtils.wait(2.0);
     }
 
 }

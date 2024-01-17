@@ -13,7 +13,7 @@ public class TC_002_TO_001 extends Hooks {
     @Test
     void test() throws InterruptedException {
 
-       Thread.sleep(3000);
+        BrowserUtils.wait(2.0);
         BrowserUtils.scrollDownWithPageDown();
         //BrowserUtils.scrollDownWithPageDown();
         pages.getTargetMarketHomePage().clickTopsPageLink();
