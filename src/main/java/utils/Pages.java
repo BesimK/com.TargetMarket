@@ -6,12 +6,16 @@ public class Pages {
 
 	private HomePage homePage;
 
+	private SmartphonesPage smartphonesPage;
+
 	private TargetMarketLoginPage targetMarketLoginPage;
 
 	private TargetMarketHomePage targetMarketHomePage;
 	private WomenDressesPage womenDressesPage;
 	private CheckoutPage checkoutPage;
 	private TopsPage topsPage;
+
+
 
 	public Pages() {
 		homePage = new HomePage();
@@ -20,6 +24,7 @@ public class Pages {
 		womenDressesPage = new WomenDressesPage();
 		checkoutPage = new CheckoutPage();
 		topsPage = new TopsPage();
+		smartphonesPage = new SmartphonesPage();
 
 	}
 
@@ -43,5 +48,8 @@ public class Pages {
 	}
 	public TopsPage getTopsPage(){
 		return topsPage;
+	}
+	public SmartphonesPage getSmartphonesPage(){
+		return smartphonesPage;
 	}
 }
