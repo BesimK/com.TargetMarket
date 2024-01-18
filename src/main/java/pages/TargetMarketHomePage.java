@@ -7,7 +7,6 @@ import utils.JSUtils;
 
 import java.util.List;
 
-
 public class TargetMarketHomePage extends BasePage {
 	@FindBy(xpath = "//h5[@class=\"display-5\"]")
 	private WebElement welcomeText;
