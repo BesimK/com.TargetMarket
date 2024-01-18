@@ -20,5 +20,4 @@ public abstract class BasePage {
 		PageFactory.initElements(DRIVER, this);
 		DRIVER.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
-
 }
