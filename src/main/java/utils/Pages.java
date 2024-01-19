@@ -14,6 +14,7 @@ public class Pages {
 	private WomenDressesPage womenDressesPage;
 	private CheckoutPage checkoutPage;
 	private TopsPage topsPage;
+	private FurniturePage furniturePage;
 
 	private GroceriesPage groceriesPage;
 
@@ -29,8 +30,11 @@ public class Pages {
 		checkoutPage = new CheckoutPage();
 		topsPage = new TopsPage();
 		smartphonesPage = new SmartphonesPage();
+
 		skincarePage = new SkincarePage();
 		groceriesPage = new GroceriesPage();
+
+		furniturePage = new FurniturePage();
 
 	}
 
@@ -66,4 +70,6 @@ public class Pages {
 	public GroceriesPage getGroceriesPage() {
 		return groceriesPage;
 	}
+  
+	public FurniturePage getFurniturePage(){return  furniturePage;}
 }

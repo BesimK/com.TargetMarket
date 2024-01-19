@@ -58,6 +58,8 @@ public class TargetMarketHomePage extends BasePage {
 		tabs.get(tabIndex).click();
 	}
 
+	public void clickFurniture(){tabs.get(6).click();}
+
 	public boolean addedToCartDialogueIsDisplayed(){
 		return notificationForCart.isDisplayed();
 	}
