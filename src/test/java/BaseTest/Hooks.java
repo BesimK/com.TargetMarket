@@ -1,7 +1,5 @@
 package BaseTest;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
@@ -14,7 +12,6 @@ public class Hooks {
 	private static final String browser = Driver.browser;
 
 	protected static Pages pages = new Pages();
-
 	protected SoftAssert softAssert = new SoftAssert();
 
 
