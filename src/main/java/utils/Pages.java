@@ -6,12 +6,25 @@ public class Pages {
 
 	private HomePage homePage;
 
+	private LaptopsPage laptopsPage;
+
+	private SmartphonesPage smartphonesPage;
+
 	private TargetMarketLoginPage targetMarketLoginPage;
 
 	private TargetMarketHomePage targetMarketHomePage;
+
 	private WomenDressesPage womenDressesPage;
+
 	private CheckoutPage checkoutPage;
+
 	private TopsPage topsPage;
+
+	private FurniturePage furniturePage;
+
+	private WomenShoesPage womenShoesPage;
+
+
 
 	public Pages() {
 		homePage = new HomePage();
@@ -20,9 +33,13 @@ public class Pages {
 		womenDressesPage = new WomenDressesPage();
 		checkoutPage = new CheckoutPage();
 		topsPage = new TopsPage();
+		smartphonesPage = new SmartphonesPage();
+		furniturePage = new FurniturePage();
+		womenShoesPage = new WomenShoesPage();
 
 	}
 
+	public WomenShoesPage getWomenShoesPage(){return womenShoesPage;}
 	public HomePage getHomePage() {
 		return homePage;
 	}
@@ -44,4 +61,9 @@ public class Pages {
 	public TopsPage getTopsPage(){
 		return topsPage;
 	}
+	public SmartphonesPage getSmartphonesPage(){
+		return smartphonesPage;
+	}
+
+	public FurniturePage getFurniturePage(){return  furniturePage;}
 }
