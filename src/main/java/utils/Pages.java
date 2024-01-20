@@ -16,6 +16,8 @@ public class Pages {
 	private TopsPage topsPage;
 	private FurniturePage furniturePage;
 
+	private WomenShoesPage womenShoesPage;
+
 
 
 	public Pages() {
@@ -27,6 +29,7 @@ public class Pages {
 		topsPage = new TopsPage();
 		smartphonesPage = new SmartphonesPage();
 		furniturePage = new FurniturePage();
+		womenShoesPage = new WomenShoesPage();
 	}
 
 	public HomePage getHomePage() {
@@ -44,15 +47,20 @@ public class Pages {
 	public WomenDressesPage getWomenDressesPage() {
 		return womenDressesPage;
 	}
+
 	public CheckoutPage getCheckoutPage(){
 		return checkoutPage;
 	}
+
 	public TopsPage getTopsPage(){
 		return topsPage;
 	}
+
 	public SmartphonesPage getSmartphonesPage(){
 		return smartphonesPage;
 	}
 
 	public FurniturePage getFurniturePage(){return  furniturePage;}
+
+	public WomenShoesPage getWomenShoesPage(){return womenShoesPage;}
 }

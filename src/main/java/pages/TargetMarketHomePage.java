@@ -46,7 +46,7 @@ public class TargetMarketHomePage extends BasePage {
 	}
 
 	public void swipeTabsLeft(){
-		JSUtils.executeJS("arguments[0].setAttribute('style','transform: translateX(-285px);')", slideList);
+		JSUtils.executeJS("arguments[0].setAttribute('style','transform: translateX(-380px);')", slideList);
 		BrowserUtils.wait(2.0);
 	}
 
@@ -59,6 +59,7 @@ public class TargetMarketHomePage extends BasePage {
 	}
 
 	public void clickFurniture(){tabs.get(6).click();}
+
 
 	public boolean addedToCartDialogueIsDisplayed(){
 		return notificationForCart.isDisplayed();

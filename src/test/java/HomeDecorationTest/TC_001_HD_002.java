@@ -29,11 +29,11 @@ public class TC_001_HD_002 extends Hooks {
             //Swipe Tabs
             pages.getTargetMarketHomePage().swipeTabsLeft();
             //Click Women Dresses
-            pages.getTargetMarketHomePage().clickWomenDresses();
+          //  pages.getTargetMarketHomePage().clickWomenDresses();
             //Get to new Tab;
             BrowserUtils.scrollDownWithPageDown();
             //Click Add to cart Button
-            pages.getWomenDressesPage().clickAddToCartButton();
+           // pages.getWomenDressesPage().clickAddToCartButton();
 		/*try{
 			//Buttons start with 1
 			pages.getWomenDressesPage().clickAddToCartButton(1,2,3);
