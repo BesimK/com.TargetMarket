@@ -38,21 +38,15 @@ public class TC_002_TO_004 extends Hooks {
 
         pages.getTopsPage().clickOnGoCheckOutButton();
 
-        pages.getTopsCheckOutPage().enterInputToFirstName("Fatih");
+        String [] inputData = {
+                "Tarık Jake",
+                "Gulbas",
+                "Testers Valley Inar Academy Street Building Before WallMart Dallas Texas",
+                "11111111111111",
+                "1111111111"};
 
-        pages.getTopsCheckOutPage().enterInputToLastName("Satan");
+        pages.getCheckoutPage().checkOut(inputData);
 
-        pages.getTopsCheckOutPage().enterInputToAddress("Ibrikder mah imar cad kartepe kocaeli");
-
-        BrowserUtils.scrollDownWithPageDown();
-        BrowserUtils.wait(2.0);
-
-        pages.getTopsCheckOutPage().enterInputToCardNumber("111111111111111");
-
-        pages.getTopsCheckOutPage().enterInputToPhoneNumber("1111111111");
-
-        pages.getTopsCheckOutPage().clickOnPlaceOrderButton();
-
-        Assert.assertTrue(pages.getTopsCheckOutPage().isCardNumberAlertDiplayed());
+        Assert.assertTrue(pages.getCheckoutPage().isCardNumberAlertDisplayed());
     }
 }

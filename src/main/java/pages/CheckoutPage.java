@@ -17,8 +17,17 @@ public class CheckoutPage extends BasePage{
     private WebElement phoneNumberField;
     @FindBy(xpath = "//button[@type=\"submit\"]")
     private WebElement submitButton;
+    @FindBy(xpath = "//div[text()='Card number must be 16 digits']")
+    private WebElement cardNumberAlert;
+    @FindBy(xpath = "//div[2]/div/h2")
+    private WebElement totalPriceText;
 
-
+    public Boolean getTotalPriceText(CharSequence text){
+        return totalPriceText.getText().contains(text);
+    }
+    public Boolean isCardNumberAlertDisplayed(){
+        return cardNumberAlert.isDisplayed();
+    }
     private static final String[] validCredentials = {
             "Tarık Jake",
             "Gulbas",
