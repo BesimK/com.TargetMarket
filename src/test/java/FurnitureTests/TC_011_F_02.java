@@ -23,7 +23,7 @@ public class TC_011_F_02 extends Hooks {
         BrowserUtils.scrollDownWithPageDown();
 
         //1. Open Browser, Navigate and Login to Target Market
-        pages.getTargetMarketHomePage().clickFurniture();
+        pages.getTargetMarketHomePage().clickTab(6);
         BrowserUtils.scrollDownWithPageDown();
         BrowserUtils.wait(2.0);
 

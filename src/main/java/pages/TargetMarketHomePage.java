@@ -37,9 +37,9 @@ public class TargetMarketHomePage extends BasePage {
 
     @FindBy(linkText = "target-market")
     private WebElement logo;
+
     @FindBy(xpath = "//button[@class=\"btn btn-danger fs-3 w-100\"]")
     private List<WebElement> addToCartButtons;
-
 
     public void clickLogoutButton() {
         logoutButton.click();
