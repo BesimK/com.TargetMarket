@@ -59,7 +59,7 @@ public class TargetMarketHomePage extends BasePage {
         if (nameOfCategory.equalsIgnoreCase("Womens Shoes") || nameOfCategory.equalsIgnoreCase("Womens Dresses")) {
             JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
             js.executeScript(
-                    "document.querySelector('#splide02-list').setAttribute('style', 'transform: translateX(-285px)');");
+                    "document.querySelector('#splide02-list').setAttribute('style', 'transform: translateX(-385px)');");
         }
         List<String> namesOfCat = tabs.stream().map(WebElement::getText).toList();
         actions.moveToElement(tabs.get(namesOfCat.indexOf(nameOfCategory)));

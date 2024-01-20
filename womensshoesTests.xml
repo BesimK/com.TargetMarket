@@ -1,0 +1,11 @@
+<suite name="womens shoes" parallel = "classes" thread-count ="1">
+    <test name="womens shoes with chrome">
+        <classes>
+            <class name = "WomenShoesPageTest.TC_025_WS_01"/>
+            <class name = "WomenShoesPageTest.TC_026_WS_02"/>
+            <class name = "WomenShoesPageTest.TC_027_WS_03"/>
+            <class name = "WomenShoesPageTest.TC_028_WS_04"/>
+
+        </classes>
+    </test>
+</suite>
