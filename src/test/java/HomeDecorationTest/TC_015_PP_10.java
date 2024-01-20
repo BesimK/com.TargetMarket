@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
-public class TC_001_HD_002 extends Hooks {
+public class TC_015_PP_10 extends Hooks {
 
 
 
@@ -22,14 +22,14 @@ public class TC_001_HD_002 extends Hooks {
 
 
         @Test
-        void womenDressSingleProduct() {
+        void homeDecorationSingleProduct() throws Exception {
             BrowserUtils.wait(2.0);
             //Scroll
             BrowserUtils.scrollDownWithPageDown();
             //Swipe Tabs
             pages.getTargetMarketHomePage().swipeTabsLeft();
             //Click Women Dresses
-            pages.getTargetMarketHomePage().clickWomenDresses();
+            pages.getTargetMarketHomePage().clickHomeDecorationPageLink();
             //Get to new Tab;
             BrowserUtils.scrollDownWithPageDown();
             //Click Add to cart Button
