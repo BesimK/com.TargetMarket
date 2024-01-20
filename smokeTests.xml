@@ -1,0 +1,21 @@
+<suite name="smoke">
+    <test name="login">
+        <classes>
+            <class name="SmartphonesTests.TC_018_SP_001">
+                <methods>
+                    <include name="aTest"/>
+                </methods>
+            </class>
+            <class name="SmartphonesTests.TC_019_SP_002">
+                <methods>
+                    <include name="bTest"/>
+                </methods>
+            </class>
+            <class name="SmartphonesTests.TC_020_SP_003">
+                <methods>
+                    <include name="cTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,9 @@
+<suite name="regression">
+    <test name="login">
+        <classes>
+            <class name="SmartphonesTests.TC_018_SP_001"/>
+            <class name="SmartphonesTests.TC_019_SP_002"/>
+            <class name="SmartphonesTests.TC_020_SP_003"/>
+        </classes>
+    </test>
+</suite>
