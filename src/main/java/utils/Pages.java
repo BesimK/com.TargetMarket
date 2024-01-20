@@ -22,6 +22,8 @@ public class Pages {
 
 	private FurniturePage furniturePage;
 
+	private WomenShoesPage womenShoesPage;
+
 
 
 	public Pages() {
@@ -33,8 +35,11 @@ public class Pages {
 		topsPage = new TopsPage();
 		smartphonesPage = new SmartphonesPage();
 		furniturePage = new FurniturePage();
+		womenShoesPage = new WomenShoesPage();
+
 	}
 
+	public WomenShoesPage getWomenShoesPage(){return womenShoesPage;}
 	public HomePage getHomePage() {
 		return homePage;
 	}
