@@ -23,7 +23,7 @@ public class TC_005_GP_02 extends Hooks {
     @Test
     void placeOrderTest() throws Exception {
         //1. Click the Groceries item
-        pages.getTargetMarketHomePage().clickTab(4);
+        pages.getTargetMarketHomePage().clickTab("Groceries");
 
         //2. Click on the add to cart button in Gulab Powder 50 Gram, - Daal Masoor 500 grams,cereals muesli fruit nuts, Elbow Macaroni - 400 gm, Orange Essence Food Flavou
         pages.getTargetMarketHomePage().clickAddToCartButton(1,2,3,4,5);

@@ -26,7 +26,7 @@ public class TC_021_SP_03 extends Hooks {
 
         // Click on the "Smartphones" button.
 
-        pages.getTargetMarketHomePage().clickTab(1);
+        pages.getTargetMarketHomePage().clickTab("Smartphones");
 
         // Click on the "Sort By" button and select the "Highest Price" option.
         pages.getSmartphonesPage().clickOnSortByToChose("Lowest Price");

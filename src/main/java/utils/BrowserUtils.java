@@ -6,14 +6,15 @@ import org.openqa.selenium.interactions.Actions;
 
 public class BrowserUtils {
 
-	private static final Actions actions = new Actions(Driver.getDriver());
 	static JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
 	public static void scrollDownWithPageDown() {
+		Actions actions = new Actions(Driver.getDriver());
 		actions.keyDown(Keys.PAGE_DOWN).release().build().perform();
 		wait(2.0);
 	}
 	public static void pressHomeButton(){
+		Actions actions = new Actions(Driver.getDriver());
 		actions.keyDown(Keys.HOME).release().build().perform();
 		wait(2.0);
 	}
@@ -24,6 +25,7 @@ public class BrowserUtils {
 	}
 
 	public static void scrollUpWithPageUp() {
+		Actions actions = new Actions(Driver.getDriver());
 		actions.keyDown(Keys.PAGE_UP).release().build().perform();
 		wait(2.0);
 	}

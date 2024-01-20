@@ -26,7 +26,7 @@ public class TC_024_WD_01 extends Hooks {
 	void womenDressAddToCartFunction(int[] products) {
 		//1. Open Browser, Navigate and Login to Target Market
 		//Get to new Tab;
-		pages.getTargetMarketHomePage().clickTab(8);
+		pages.getTargetMarketHomePage().clickTab("Womens Dresses");
 
 		//3. Add Product/Products to Cart
 		//Click Add to cart Button

@@ -25,8 +25,8 @@ public class TC_027_WS_03 extends Hooks {
 
         //1.Scroll Down the page
         //2.Click the Womens Shoes Button
-        pages.getTargetMarketHomePage().swipeTabsLeft();
-        pages.getTargetMarketHomePage().clickTab(9);
+        //pages.getTargetMarketHomePage().swipeTabsLeft();
+        pages.getTargetMarketHomePage().clickTab("Womens Shoes");
 
         //3.Scroll Down the Page
         BrowserUtils.scrollUpWithPageUp();

@@ -17,7 +17,7 @@ public class TC_004_GP_01 extends Hooks {
     void groceriesAddToCartFunctions() throws Exception {
 
         //1. Click the Groceries item
-        pages.getTargetMarketHomePage().clickTab(4);
+        pages.getTargetMarketHomePage().clickTab("Groceries");
 
         //2. Click on the add to cart button in Gulab Powder 50 Gram, -Daal Masoor 500 grams
         pages.getTargetMarketHomePage().clickAddToCartButton(1,5);

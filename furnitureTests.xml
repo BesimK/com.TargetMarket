@@ -1,0 +1,11 @@
+<suite name="furniture">
+    <test name="furniture with chrome">
+        <classes>
+            <class name = "FurniturePageTests.TC_007_FP_01"/>
+            <class name = "FurniturePageTests.TC_008_FP_02"/>
+            <class name = "FurniturePageTests.TC_009_FP_03"/>
+            <class name = "FurniturePageTests.TC_010_FP_04"/>
+
+        </classes>
+    </test>
+</suite>
