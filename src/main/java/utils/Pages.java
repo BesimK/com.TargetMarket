@@ -22,11 +22,7 @@ public class Pages {
 
 	private FurniturePage furniturePage;
 
-	private GroceriesPage groceriesPage;
-
-	private SkincarePage skincarePage;
-
-	private TopsCheckOutPage topsCheckOutPage;
+	private WomenShoesPage womenShoesPage;
 
 
 
@@ -38,13 +34,12 @@ public class Pages {
 		checkoutPage = new CheckoutPage();
 		topsPage = new TopsPage();
 		smartphonesPage = new SmartphonesPage();
-		skincarePage = new SkincarePage();
-		groceriesPage = new GroceriesPage();
 		furniturePage = new FurniturePage();
-		laptopsPage = new LaptopsPage();
-		topsCheckOutPage = new TopsCheckOutPage();
+		womenShoesPage = new WomenShoesPage();
+
 	}
 
+	public WomenShoesPage getWomenShoesPage(){return womenShoesPage;}
 	public HomePage getHomePage() {
 		return homePage;
 	}
@@ -60,30 +55,15 @@ public class Pages {
 	public WomenDressesPage getWomenDressesPage() {
 		return womenDressesPage;
 	}
-
 	public CheckoutPage getCheckoutPage(){
 		return checkoutPage;
 	}
-
 	public TopsPage getTopsPage(){
 		return topsPage;
 	}
-
 	public SmartphonesPage getSmartphonesPage(){
 		return smartphonesPage;
 	}
 
-	public SkincarePage getSkincarePage() {
-		return skincarePage;
-	}
-
-	public GroceriesPage getGroceriesPage() {
-		return groceriesPage;
-	}
-  
 	public FurniturePage getFurniturePage(){return  furniturePage;}
-
-	public LaptopsPage getLaptopsPage(){return  laptopsPage;}
-
-  public TopsCheckOutPage getTopsCheckOutPage(){return topsCheckOutPage;}
 }
