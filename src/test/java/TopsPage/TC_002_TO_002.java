@@ -9,7 +9,7 @@ import utils.BrowserUtils;
 public class TC_002_TO_002 extends Hooks {
 
     @Test
-    void test() throws InterruptedException {
+    void test() {
 
         BrowserUtils.scrollDownWithPageDown();
         //BrowserUtils.scrollDownWithPageDown();
@@ -18,7 +18,7 @@ public class TC_002_TO_002 extends Hooks {
 
         BrowserUtils.scrollDownWithPageDown();
 
-        Thread.sleep(2000);
+        BrowserUtils.wait(2.0);
 
         pages.getTopsPage().clickOnAddToCartButton(0);
 
@@ -30,7 +30,7 @@ public class TC_002_TO_002 extends Hooks {
 
         BrowserUtils.scrollDownWithPageDown();
 
-        Thread.sleep(2000);
+        BrowserUtils.wait(2.0);
 
         pages.getTopsPage().clickOnAddToCartButton(0);
 
@@ -40,12 +40,8 @@ public class TC_002_TO_002 extends Hooks {
 
         BrowserUtils.scrollDownWithPageDown();
 
-        Thread.sleep(2000);
+        BrowserUtils.wait(2.0);
 
-        Assert.assertTrue(pages.getTopsCheckOutPage().getTotatlPriceText("$897.00"));
-
-
-
-
+        Assert.assertTrue(pages.getCheckoutPage().getTotalPriceText("$897.00"));
     }
 }
