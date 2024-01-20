@@ -19,7 +19,7 @@ public class TC_019_SP_01 extends Hooks {
         // Open the URL and Navigate to Target Market Home Page.
 
         // Click on the "Smartphones" button.
-        pages.getTargetMarketHomePage().clickTab(1);
+        pages.getTargetMarketHomePage().clickTab("Smartphones");
 
         // Click on the "Sort By" button and select the "Highest Price" option.
         pages.getSmartphonesPage().clickOnSortByToChose("Highest Price");

@@ -21,7 +21,7 @@ public class TC_006_GP_03 extends Hooks {
     void testCartItemsFunctionalityInCheckoutPage() throws Exception {
 
         //1. Click the Groceries item
-        pages.getTargetMarketHomePage().clickTab(4);
+        pages.getTargetMarketHomePage().clickTab("Groceries");
 
         //2. Click on the add to cart button in Orange Essence Food Flavou
         //3. Click on the add to cart button in Elbow Macaroni - 400 gm

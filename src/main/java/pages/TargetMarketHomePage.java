@@ -1,8 +1,11 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import utils.BrowserUtils;
+import utils.Driver;
 import utils.JSUtils;
 
 import java.util.List;
@@ -45,17 +48,27 @@ public class TargetMarketHomePage extends BasePage {
         logoutButton.click();
     }
 
-    public void swipeTabsLeft() {
-        JSUtils.executeJS("arguments[0].setAttribute('style','transform: translateX(-285px);')", slideList);
-        BrowserUtils.wait(2.0);
-    }
 
-    public void clickTab(int tabIndex) {
-        BrowserUtils.scrollDownWithPageDown();
-        if (tabIndex > 7) {
-            swipeTabsLeft();
+    //    public void swipeTabsLeft() {
+//        JSUtils.executeJS("arguments[0].setAttribute('style','transform: translateX(-385px);')", slideList);
+//        BrowserUtils.wait(2.0);
+//    }
+//
+    public void clickTab(String nameOfCategory) {
+        wait.until(ExpectedConditions.visibilityOf(welcomeText));
+        if (nameOfCategory.equalsIgnoreCase("Womens Shoes") || nameOfCategory.equalsIgnoreCase("Womens Dresses")) {
+            JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+            js.executeScript(
+                    "document.querySelector('#splide02-list').setAttribute('style', 'transform: translateX(-285px)');");
         }
-        tabs.get(tabIndex).click();
+        List<String> namesOfCat = tabs.stream().map(WebElement::getText).toList();
+        actions.moveToElement(tabs.get(namesOfCat.indexOf(nameOfCategory)));
+        BrowserUtils.wait(1.0);
+        try {
+            tabs.get(namesOfCat.indexOf(nameOfCategory)).click();
+        } catch (Exception ex) {
+            tabs.get(namesOfCat.indexOf(nameOfCategory)).click();
+        }
     }
 
     public boolean addedToCartDialogueIsDisplayed() {

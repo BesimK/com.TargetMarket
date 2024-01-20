@@ -19,7 +19,7 @@ public class TC_003_SC_03 extends Hooks {
     @Test
     void checkoutPageItemListTest() throws Exception {
         //1. Click the Skincare item
-        pages.getTargetMarketHomePage().clickTab(3);
+        pages.getTargetMarketHomePage().clickTab("Skincare");
 
         //2. Verify you are on the Skincare page
         String expected = "Skincare";

@@ -15,7 +15,7 @@ public class TC_001_SC_01 extends Hooks {
     @Test
     void skincareAddToCartFunctions() throws Exception {
         //1. Click the Skincare item
-        pages.getTargetMarketHomePage().clickTab(3);
+        pages.getTargetMarketHomePage().clickTab("Skincare");
 
         //2. Verify you are on the Skincare page
         String expected = "Skincare";

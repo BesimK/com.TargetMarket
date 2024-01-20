@@ -23,7 +23,7 @@ public class TC_023_LP_02 extends Hooks {
         // Open the URL and Navigate to Target Market Home Page.
 
         // Click on the "Laptops" button.
-        pages.getTargetMarketHomePage().clickTab(2);
+        pages.getTargetMarketHomePage().clickTab("Laptops");
 
         // Click on the "Microsoft Surface Laptop 4" Add to Cart button.
         BrowserUtils.scrollDownWithPageDown();

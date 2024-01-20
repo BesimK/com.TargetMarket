@@ -1,7 +1,0 @@
-<suite name="regression">
-    <test name="login">
-        <classes>
-
-        </classes>
-    </test>
-</suite>

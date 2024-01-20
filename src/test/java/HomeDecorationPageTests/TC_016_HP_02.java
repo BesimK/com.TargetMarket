@@ -27,7 +27,7 @@ public class TC_016_HP_02 extends Hooks {
             //Scroll
             BrowserUtils.scrollDownWithPageDown();
             //Swipe Tabs
-            pages.getTargetMarketHomePage().swipeTabsLeft();
+           // pages.getTargetMarketHomePage().swipeTabsLeft();
             //Click Women Dresses
             pages.getTargetMarketHomePage().clickHomeDecorationPageLink();
             //Get to new Tab;

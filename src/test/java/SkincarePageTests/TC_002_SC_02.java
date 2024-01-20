@@ -18,7 +18,7 @@ public class TC_002_SC_02 extends Hooks {
     void sortByDropdownFunctionality() {
 
         //1.Click the Skincare item
-        pages.getTargetMarketHomePage().clickTab(3);
+        pages.getTargetMarketHomePage().clickTab("Skincare");
 
         //2.Verify you are on the Skincare page
         String expected = "Skincare";

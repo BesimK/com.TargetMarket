@@ -1,0 +1,10 @@
+<suite name="smartphones">
+    <test name="smartphones with chrome">
+        <classes>
+            <class name = "SmartphonesPageTests.TC_019_SP_01"/>
+            <class name = "SmartphonesPageTests.TC_020_SP_02"/>
+            <class name = "SmartphonesPageTests.TC_021_SP_03"/>
+
+        </classes>
+    </test>
+</suite>

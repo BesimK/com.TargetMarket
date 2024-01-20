@@ -20,8 +20,8 @@ public class TC_028_WS_04 extends Hooks {
 
         //1.Scroll Down the page
         //2.Click the Womens Shoes Button
-        pages.getTargetMarketHomePage().swipeTabsLeft();
-        pages.getTargetMarketHomePage().clickTab(9);
+       // pages.getTargetMarketHomePage().swipeTabsLeft();
+        pages.getTargetMarketHomePage().clickTab("Womens Shoes");
 
         //3.click on Sort By button
         //4.Select the Lowest Price from the list
