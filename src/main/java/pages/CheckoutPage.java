@@ -37,5 +37,16 @@ public class CheckoutPage extends BasePage{
         submitButton.click();
         BrowserUtils.wait(2.0);
     }
+    public void checkOut(String[] credentials){
+        firstNameField.sendKeys(credentials[0]);
+        lastNameField.sendKeys(credentials[1]);
+        addressField.sendKeys(credentials[2]);
+        cardNumberField.sendKeys(credentials[3]);
+        phoneNumberField.sendKeys(credentials[4]);
+        BrowserUtils.scrollDownWithPageDown();
+        BrowserUtils.wait(2.0);
+        submitButton.click();
+        BrowserUtils.wait(2.0);
+    }
 
 }
