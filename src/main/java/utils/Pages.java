@@ -26,6 +26,8 @@ public class Pages {
 
 	private SkincarePage skincarePage;
 
+	private TopsCheckOutPage topsCheckOutPage;
+
 
 
 	public Pages() {
@@ -40,6 +42,7 @@ public class Pages {
 		groceriesPage = new GroceriesPage();
 		furniturePage = new FurniturePage();
 		laptopsPage = new LaptopsPage();
+		topsCheckOutPage = new TopsCheckOutPage();
 	}
 
 	public HomePage getHomePage() {
@@ -81,4 +84,6 @@ public class Pages {
 	public FurniturePage getFurniturePage(){return  furniturePage;}
 
 	public LaptopsPage getLaptopsPage(){return  laptopsPage;}
+
+  public TopsCheckOutPage getTopsCheckOutPage(){return topsCheckOutPage;}
 }

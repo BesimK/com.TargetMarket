@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,22 +12,31 @@ public class TopsPage extends BasePage{
     @FindBy(id = "//*[@id=\"sortType\"]/option")
     private List<WebElement> sortByDropDownElements;
 
-    @FindBy(xpath = "//*[@id=\"navbar\"]/div/div/button[2]")
+    @FindBy(xpath = "//button[2]/span")
     private WebElement goToCartButton;
+
+    @FindBy(xpath = "//button[text()='Go to Checkout']")
+    private WebElement goToCheckOutButton;
+
+
+
 
     public void clickOnAddToCartButton(int index){
 
-        try {
-            addToCartButtons.get(index).click();
-        }
-        catch (NullPointerException e){
-            addToCartButtons.get(index).click();
-        }
+        addToCartButtons.get(index).click();
 
     }
     public void clickOnGoToCartButton(){
         goToCartButton.click();
     }
+
+    public void clickOnGoCheckOutButton() {goToCheckOutButton.click();}
+
+    public String getTextOfCartButton(){
+        return goToCartButton.getText();
+    }
+
+
 
 
 }
