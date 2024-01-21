@@ -7,40 +7,41 @@ import utils.BrowserUtils;
 
 public class TC_012_TP_02 extends Hooks {
 
-    @Test
-    void test() {
+	@Test
+	void test() {
 
-        BrowserUtils.scrollDownWithPageDown();
-        //BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.scrollDownWithPageDown();
+		// BrowserUtils.scrollDownWithPageDown();
 
-        pages.getTargetMarketHomePage().clickTopsPageLink();
+		pages.getTargetMarketHomePage().clickTopsPageLink();
 
-        BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.scrollDownWithPageDown();
 
-        BrowserUtils.wait(2.0);
+		BrowserUtils.wait(2.0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.scrollDownWithPageDown();
 
-        BrowserUtils.wait(2.0);
+		BrowserUtils.wait(2.0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnGoToCartButton();
+		pages.getTopsPage().clickOnGoToCartButton();
 
-        pages.getTopsPage().clickOnGoCheckOutButton();
+		pages.getTopsPage().clickOnGoCheckOutButton();
 
-        BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.scrollDownWithPageDown();
 
-        BrowserUtils.wait(2.0);
+		BrowserUtils.wait(2.0);
 
-        Assert.assertTrue(pages.getCheckoutPage().getTotalPriceText("$897.00"));
-    }
+		Assert.assertTrue(pages.getCheckoutPage().getTotalPriceText("$897.00"));
+	}
+
 }

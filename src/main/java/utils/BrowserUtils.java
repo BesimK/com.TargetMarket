@@ -13,7 +13,8 @@ public class BrowserUtils {
 		actions.keyDown(Keys.PAGE_DOWN).release().build().perform();
 		wait(2.0);
 	}
-	public static void pressHomeButton(){
+
+	public static void pressHomeButton() {
 		Actions actions = new Actions(Driver.getDriver());
 		actions.keyDown(Keys.HOME).release().build().perform();
 		wait(2.0);

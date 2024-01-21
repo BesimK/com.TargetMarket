@@ -16,37 +16,31 @@ import static org.testng.Assert.assertEquals;
 
 public class TC_025_WS_01 extends Hooks {
 
-    @Test
-    public void verifyWomenShoesPageFuctionality(){
+	@Test
+	public void verifyWomenShoesPageFuctionality() {
 
-        //1.Scroll Down the page
-        //2.Click the Womens Shoes Button
-        pages.getTargetMarketHomePage().clickTab("Womens Shoes");
+		// 1.Scroll Down the page
+		// 2.Click the Womens Shoes Button
+		pages.getTargetMarketHomePage().clickTab("Womens Shoes");
 
-        //3.Scroll up the page
-        BrowserUtils.scrollUpWithPageUp();
+		// 3.Scroll up the page
+		BrowserUtils.scrollUpWithPageUp();
 
-        //4.Verify that Womens Shoes headLine Shown
-        BrowserUtils.wait(3.0);
-        String expectedHead = "Womens Shoes";
-        String actualHead = pages.getWomenShoesPage().getHeaderOfWomenShoesPage();
-        System.out.println(actualHead);
-        assertEquals(expectedHead,actualHead , "HeadLine should be Womens Shoes");
+		// 4.Verify that Womens Shoes headLine Shown
+		BrowserUtils.wait(3.0);
+		String expectedHead = "Womens Shoes";
+		String actualHead = pages.getWomenShoesPage().getHeaderOfWomenShoesPage();
+		System.out.println(actualHead);
+		assertEquals(expectedHead, actualHead, "HeadLine should be Womens Shoes");
 
-        //5.Click The LogOut Button
-        pages.getTargetMarketHomePage().clickLogoutButton();
+		// 5.Click The LogOut Button
+		pages.getTargetMarketHomePage().clickLogoutButton();
 
-        //6.Verify that the Login Page Opened
-        String expectedLoginHead = "Login";
-        String actualLoginHead = pages.getWomenShoesPage().getHeaderOfLoginPage();
-        assertEquals(expectedLoginHead , actualLoginHead , "it should be -Login- text");
+		// 6.Verify that the Login Page Opened
+		String expectedLoginHead = "Login";
+		String actualLoginHead = pages.getWomenShoesPage().getHeaderOfLoginPage();
+		assertEquals(expectedLoginHead, actualLoginHead, "it should be -Login- text");
 
+	}
 
-
-
-
-
-
-
-    }
 }

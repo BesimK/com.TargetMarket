@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Login Suite with Extent Reports" parallel="classes" thread-count="1">
+    <!--<listeners>
+        <listener class-name="listeners.ExtentReportListener"/>
+    </listeners>-->
+    <test name="Target Market Home Decoration Page Chrome Tests">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="HomeDecorationPageTests.TC_015_HP_01"/>
+            <class name="HomeDecorationPageTests.TC_016_HP_02"/>
+            <class name="HomeDecorationPageTests.TC_017_HP_03"/>
+            <class name="HomeDecorationPageTests.TC_018_HP_04"/>
+        </classes>
+    </test>
+</suite>

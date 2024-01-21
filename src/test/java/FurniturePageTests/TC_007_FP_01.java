@@ -6,44 +6,43 @@ import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
 /**
- * 1. Open Browser, Navigate and Login to Target Market
- * 2.Get the header of Furniture Header
- * 3.Verify that the header is correct
- * 4.Implement Log Out process frım FurniturePage
- * 5.Check shopping Cart is "1"
- * 6.Implement Kog Out process
+ * 1. Open Browser, Navigate and Login to Target Market 2.Get the header of Furniture
+ * Header 3.Verify that the header is correct 4.Implement Log Out process frım
+ * FurniturePage 5.Check shopping Cart is "1" 6.Implement Kog Out process
  */
 public class TC_007_FP_01 extends Hooks {
- @Test
-    public void testFurniturePage00(){
 
-     BrowserUtils.wait(2.0);
+	@Test
+	public void testFurniturePage00() {
 
-     BrowserUtils.scrollDownWithPageDown();
-     //1. Open Browser, Navigate and Login to Target Market
-     pages.getTargetMarketHomePage().clickTab("Furniture");
-     BrowserUtils.scrollUpWithPageUp();
-     BrowserUtils.wait(2.0);
+		BrowserUtils.wait(2.0);
 
-     //2.Get the header of Furniture Header
-     String actualHeader = pages.getFurniturePage().getHeaderOfFurniturePage();
+		BrowserUtils.scrollDownWithPageDown();
+		// 1. Open Browser, Navigate and Login to Target Market
+		pages.getTargetMarketHomePage().clickTab("Furniture");
+		BrowserUtils.scrollUpWithPageUp();
+		BrowserUtils.wait(2.0);
 
-     //3.Verify that the header is correct
-     Assert.assertEquals(actualHeader,"Furniture","We are in wrong Page!");
-     BrowserUtils.scrollDownWithPageDown();
-     BrowserUtils.wait(1.0);
-     BrowserUtils.scrollDownWithPageDown();
+		// 2.Get the header of Furniture Header
+		String actualHeader = pages.getFurniturePage().getHeaderOfFurniturePage();
 
-     //4.Add the first product to SoppingCart
-     pages.getFurniturePage().clickTheAddCartButton(1);
+		// 3.Verify that the header is correct
+		Assert.assertEquals(actualHeader, "Furniture", "We are in wrong Page!");
+		BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.wait(1.0);
+		BrowserUtils.scrollDownWithPageDown();
 
-     //5.Check shopping Cart is "1"
-     BrowserUtils.wait(1.0);
-     BrowserUtils.scrollUpWithPageUp();
-     String countOfShoppingCart = pages.getTargetMarketHomePage().getTextFromCartCounter();
-     Assert.assertEquals(countOfShoppingCart,"1");
+		// 4.Add the first product to SoppingCart
+		pages.getFurniturePage().clickTheAddCartButton(1);
 
-     //6.Implement Kog Out process
-     pages.getTargetMarketHomePage().clickLogoutButton();
- }
+		// 5.Check shopping Cart is "1"
+		BrowserUtils.wait(1.0);
+		BrowserUtils.scrollUpWithPageUp();
+		String countOfShoppingCart = pages.getTargetMarketHomePage().getTextFromCartCounter();
+		Assert.assertEquals(countOfShoppingCart, "1");
+
+		// 6.Implement Kog Out process
+		pages.getTargetMarketHomePage().clickLogoutButton();
+	}
+
 }

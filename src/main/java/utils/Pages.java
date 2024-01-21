@@ -4,93 +4,92 @@ import pages.*;
 
 public class Pages {
 
-    private HomePage homePage;
+	private HomePage homePage;
 
-    private LaptopsPage laptopsPage;
+	private LaptopsPage laptopsPage;
 
-    private SmartphonesPage smartphonesPage;
+	private SmartphonesPage smartphonesPage;
 
-    private TargetMarketLoginPage targetMarketLoginPage;
+	private TargetMarketLoginPage targetMarketLoginPage;
 
-    private TargetMarketHomePage targetMarketHomePage;
+	private TargetMarketHomePage targetMarketHomePage;
 
-    private WomenDressesPage womenDressesPage;
+	private WomenDressesPage womenDressesPage;
 
-    private CheckoutPage checkoutPage;
+	private CheckoutPage checkoutPage;
 
-    private TopsPage topsPage;
+	private TopsPage topsPage;
 
-    private FurniturePage furniturePage;
+	private FurniturePage furniturePage;
 
-    private WomenShoesPage womenShoesPage;
+	private WomenShoesPage womenShoesPage;
 
-    private GroceriesPage groceriesPage;
+	private GroceriesPage groceriesPage;
 
-    private SkincarePage skincarePage;
+	private SkincarePage skincarePage;
 
+	public Pages() {
+		homePage = new HomePage();
+		targetMarketLoginPage = new TargetMarketLoginPage();
+		targetMarketHomePage = new TargetMarketHomePage();
+		womenDressesPage = new WomenDressesPage();
+		checkoutPage = new CheckoutPage();
+		topsPage = new TopsPage();
+		smartphonesPage = new SmartphonesPage();
+		furniturePage = new FurniturePage();
+		womenShoesPage = new WomenShoesPage();
+		groceriesPage = new GroceriesPage();
+		skincarePage = new SkincarePage();
+		laptopsPage = new LaptopsPage();
 
-    public Pages() {
-        homePage = new HomePage();
-        targetMarketLoginPage = new TargetMarketLoginPage();
-        targetMarketHomePage = new TargetMarketHomePage();
-        womenDressesPage = new WomenDressesPage();
-        checkoutPage = new CheckoutPage();
-        topsPage = new TopsPage();
-        smartphonesPage = new SmartphonesPage();
-        furniturePage = new FurniturePage();
-        womenShoesPage = new WomenShoesPage();
-        groceriesPage = new GroceriesPage();
-        skincarePage = new SkincarePage();
-        laptopsPage = new LaptopsPage();
+	}
 
-    }
+	public WomenShoesPage getWomenShoesPage() {
+		return womenShoesPage;
+	}
 
-    public WomenShoesPage getWomenShoesPage() {
-        return womenShoesPage;
-    }
+	public HomePage getHomePage() {
+		return homePage;
+	}
 
-    public HomePage getHomePage() {
-        return homePage;
-    }
+	public TargetMarketLoginPage getTargetMarketLoginPage() {
+		return targetMarketLoginPage;
+	}
 
-    public TargetMarketLoginPage getTargetMarketLoginPage() {
-        return targetMarketLoginPage;
-    }
+	public TargetMarketHomePage getTargetMarketHomePage() {
+		return targetMarketHomePage;
+	}
 
-    public TargetMarketHomePage getTargetMarketHomePage() {
-        return targetMarketHomePage;
-    }
+	public WomenDressesPage getWomenDressesPage() {
+		return womenDressesPage;
+	}
 
-    public WomenDressesPage getWomenDressesPage() {
-        return womenDressesPage;
-    }
+	public CheckoutPage getCheckoutPage() {
+		return checkoutPage;
+	}
 
-    public CheckoutPage getCheckoutPage() {
-        return checkoutPage;
-    }
+	public TopsPage getTopsPage() {
+		return topsPage;
+	}
 
-    public TopsPage getTopsPage() {
-        return topsPage;
-    }
+	public SmartphonesPage getSmartphonesPage() {
+		return smartphonesPage;
+	}
 
-    public SmartphonesPage getSmartphonesPage() {
-        return smartphonesPage;
-    }
+	public FurniturePage getFurniturePage() {
+		return furniturePage;
+	}
 
-    public FurniturePage getFurniturePage() {
-        return furniturePage;
-    }
+	public GroceriesPage getGroceriesPage() {
+		return groceriesPage;
+	}
 
-    public GroceriesPage getGroceriesPage() {
-        return groceriesPage;
-    }
+	public SkincarePage getSkincarePage() {
+		return skincarePage;
+	}
 
-    public SkincarePage getSkincarePage() {
-        return skincarePage;
-    }
-
-    public LaptopsPage getLaptopsPage() {
-        return laptopsPage;
-    }
+	public LaptopsPage getLaptopsPage() {
+		return laptopsPage;
+	}
 
 }

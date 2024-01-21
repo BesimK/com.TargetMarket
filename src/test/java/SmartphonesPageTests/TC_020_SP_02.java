@@ -6,32 +6,30 @@ import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
 /**
- * 1. Open the URL.
- * 2. Navigate to Target Market Home Page.
- * 3. Click on the "Smartphones" button.
- * 4. Click on the "Sort By" button and select the "None" option.
- * 5. Click on the "iPhone X" Add to Cart button.
- * 6. Verify that the product is added in shopping cart.
+ * 1. Open the URL. 2. Navigate to Target Market Home Page. 3. Click on the "Smartphones"
+ * button. 4. Click on the "Sort By" button and select the "None" option. 5. Click on the
+ * "iPhone X" Add to Cart button. 6. Verify that the product is added in shopping cart.
  */
 public class TC_020_SP_02 extends Hooks {
 
-    @Test
-    void verifyAddedToCartButtonFunctionality() {
+	@Test
+	void verifyAddedToCartButtonFunctionality() {
 
-        // Open the URL and Navigate to Target Market Home Page.
+		// Open the URL and Navigate to Target Market Home Page.
 
-        // Click on the "Smartphones" button.
-        pages.getTargetMarketHomePage().clickTab("Smartphones");
+		// Click on the "Smartphones" button.
+		pages.getTargetMarketHomePage().clickTab("Smartphones");
 
-        // Click on the "Sort By" button and select the "None" option.
-        pages.getSmartphonesPage().clickOnSortByToChose("Highest Price");
+		// Click on the "Sort By" button and select the "None" option.
+		pages.getSmartphonesPage().clickOnSortByToChose("Highest Price");
 
-        // Click on the "iPhone X" Add to Cart button.
-        BrowserUtils.scrollDownWithPageDown();
-        pages.getSmartphonesPage().clickOnSelectedProduct("iPhone X");
+		// Click on the "iPhone X" Add to Cart button.
+		BrowserUtils.scrollDownWithPageDown();
+		pages.getSmartphonesPage().clickOnSelectedProduct("iPhone X");
 
-        // Verify that the product is added in shopping cart.
-        String numberOfProduct = pages.getSmartphonesPage().getCountOfShoppingCart();
-        Assert.assertEquals(numberOfProduct, "1");
-    }
+		// Verify that the product is added in shopping cart.
+		String numberOfProduct = pages.getSmartphonesPage().getCountOfShoppingCart();
+		Assert.assertEquals(numberOfProduct, "1");
+	}
+
 }
