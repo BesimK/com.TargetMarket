@@ -13,9 +13,9 @@ public class Hooks {
 
 	private static final String browser = Driver.browser;
 
-	protected static Pages pages ;
-	protected SoftAssert softAssert = new SoftAssert();
+	protected static Pages pages;
 
+	protected SoftAssert softAssert = new SoftAssert();
 
 	@BeforeClass
 	public static void setUp() {
@@ -25,7 +25,7 @@ public class Hooks {
 			Driver.getDriver().navigate().refresh();
 		}
 		pages.getHomePage().clickOnTargetMarketLink();
-		pages.getTargetMarketLoginPage().login("standard_user","secret_password");
+		pages.getTargetMarketLoginPage().login("standard_user", "secret_password");
 		BrowserUtils.wait(2.0);
 	}
 

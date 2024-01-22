@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Login Suite with Extent Reports" parallel="classes" thread-count="1">
+    <!--<listeners>
+        <listener class-name="listeners.ExtentReportListener"/>
+    </listeners>-->
+    <test name="Target Market Skin care Page Chrome Tests">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="SkincarePageTests.TC_001_SC_01"/>
+            <class name="SkincarePageTests.TC_002_SC_02"/>
+            <class name="SkincarePageTests.TC_003_SC_03"/>
+        </classes>
+    </test>
+</suite>

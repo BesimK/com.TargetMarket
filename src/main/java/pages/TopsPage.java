@@ -5,38 +5,36 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class TopsPage extends BasePage{
-    @FindBy(xpath = "//button[text()='Add to Cart']")
-    private List<WebElement> addToCartButtons;
+public class TopsPage extends BasePage {
 
-    @FindBy(id = "//*[@id=\"sortType\"]/option")
-    private List<WebElement> sortByDropDownElements;
+	@FindBy(xpath = "//button[text()='Add to Cart']")
+	private List<WebElement> addToCartButtons;
 
-    @FindBy(xpath = "//button[2]/span")
-    private WebElement goToCartButton;
+	@FindBy(id = "//*[@id=\"sortType\"]/option")
+	private List<WebElement> sortByDropDownElements;
 
-    @FindBy(xpath = "//button[text()='Go to Checkout']")
-    private WebElement goToCheckOutButton;
+	@FindBy(xpath = "//button[2]/span")
+	private WebElement goToCartButton;
 
+	@FindBy(xpath = "//button[text()='Go to Checkout']")
+	private WebElement goToCheckOutButton;
 
+	public void clickOnAddToCartButton(int index) {
 
+		addToCartButtons.get(index).click();
 
-    public void clickOnAddToCartButton(int index){
+	}
 
-        addToCartButtons.get(index).click();
+	public void clickOnGoToCartButton() {
+		goToCartButton.click();
+	}
 
-    }
-    public void clickOnGoToCartButton(){
-        goToCartButton.click();
-    }
+	public void clickOnGoCheckOutButton() {
+		goToCheckOutButton.click();
+	}
 
-    public void clickOnGoCheckOutButton() {goToCheckOutButton.click();}
-
-    public String getTextOfCartButton(){
-        return goToCartButton.getText();
-    }
-
-
-
+	public String getTextOfCartButton() {
+		return goToCartButton.getText();
+	}
 
 }

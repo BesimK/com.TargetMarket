@@ -7,51 +7,44 @@ import utils.BrowserUtils;
 
 public class TC_013_TP_03 extends Hooks {
 
+	@Test
+	void testValidPlaceOrder() throws InterruptedException {
+		BrowserUtils.scrollDownWithPageDown();
 
-    @Test
-    void testValidPlaceOrder() throws InterruptedException {
-        BrowserUtils.scrollDownWithPageDown();
+		pages.getTargetMarketHomePage().clickTopsPageLink();
 
-        pages.getTargetMarketHomePage().clickTopsPageLink();
+		BrowserUtils.scrollDownWithPageDown();
 
-        BrowserUtils.scrollDownWithPageDown();
+		Thread.sleep(2000);
 
-        Thread.sleep(2000);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		Thread.sleep(3000);
 
-        Thread.sleep(3000);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		BrowserUtils.scrollDownWithPageDown();
 
-        BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.wait(2.0);
 
-        BrowserUtils.wait(2.0);
+		pages.getTopsPage().clickOnAddToCartButton(0);
 
-        pages.getTopsPage().clickOnAddToCartButton(0);
+		pages.getTopsPage().clickOnGoToCartButton();
 
-        pages.getTopsPage().clickOnGoToCartButton();
+		pages.getTopsPage().clickOnGoCheckOutButton();
 
-        pages.getTopsPage().clickOnGoCheckOutButton();
+		String[] inputData = { "Tarık Jake", "Gulbas",
+				"Testers Valley Inar Academy Street Building Before WallMart Dallas Texas", "1111111111111111",
+				"1111111111" };
 
-       String [] inputData = {
-               "Tarık Jake",
-               "Gulbas",
-               "Testers Valley Inar Academy Street Building Before WallMart Dallas Texas",
-               "1111111111111111",
-               "1111111111"};
+		pages.getCheckoutPage().checkOut(inputData);
 
-       pages.getCheckoutPage().checkOut(inputData);
+		Assert.assertEquals(pages.getTargetMarketHomePage().getCheckoutMessage(), "Thanks!");
 
-        Assert.assertEquals(pages.getTargetMarketHomePage().getCheckoutMessage(),"Thanks!");
-
-
-
-
-    }
+	}
 
 }

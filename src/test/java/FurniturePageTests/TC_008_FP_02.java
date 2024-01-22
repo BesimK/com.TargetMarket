@@ -6,46 +6,46 @@ import org.testng.annotations.Test;
 import utils.BrowserUtils;
 
 /**
- * 1. Open Browser, Navigate and Login to Target Market
- * 2.Click the “AddToCart” buttons for products IN ORDER
- * 3.Click the shoppingCart button
- * 4.Get the name's of products in order
- * 5.Verify that all products added to Shopping card in order
+ * 1. Open Browser, Navigate and Login to Target Market 2.Click the “AddToCart” buttons
+ * for products IN ORDER 3.Click the shoppingCart button 4.Get the name's of products in
+ * order 5.Verify that all products added to Shopping card in order
  */
 public class TC_008_FP_02 extends Hooks {
-    @Test
-    public void testFurniturePAge01() {
-        //Waiting is for preConditions
-        BrowserUtils.wait(2.0);
-        BrowserUtils.scrollDownWithPageDown();
 
-        //1. Open Browser, Navigate and Login to Target Market
-        pages.getTargetMarketHomePage().clickTab("Furniture");
-        BrowserUtils.scrollDownWithPageDown();
-        BrowserUtils.wait(2.0);
+	@Test
+	public void testFurniturePAge01() {
+		// Waiting is for preConditions
+		BrowserUtils.wait(2.0);
+		BrowserUtils.scrollDownWithPageDown();
 
-        //2.Click the “AddToCart” buttons for products IN ORDER
-        // -3 Tier Corner Shelves
-        // -Sofa for Coffe Cafe
-        //	-Mornadi Velvet Bed
-        pages.getFurniturePage().clickTheAddCartButton(3);
-        pages.getFurniturePage().clickTheAddCartButton(2);
-        pages.getFurniturePage().clickTheAddCartButton(1);
+		// 1. Open Browser, Navigate and Login to Target Market
+		pages.getTargetMarketHomePage().clickTab("Furniture");
+		BrowserUtils.scrollDownWithPageDown();
+		BrowserUtils.wait(2.0);
 
-        BrowserUtils.scrollUpWithPageUp();
+		// 2.Click the “AddToCart” buttons for products IN ORDER
+		// -3 Tier Corner Shelves
+		// -Sofa for Coffe Cafe
+		// -Mornadi Velvet Bed
+		pages.getFurniturePage().clickTheAddCartButton(3);
+		pages.getFurniturePage().clickTheAddCartButton(2);
+		pages.getFurniturePage().clickTheAddCartButton(1);
 
-        //3.Click the shoppingCart button
-        pages.getTargetMarketHomePage().clickCartButton();
+		BrowserUtils.scrollUpWithPageUp();
 
-        //4.Get the name's of products in oreder
-        //5.Verify that all products added to Shopping card in order
-       boolean condition1 = pages.getFurniturePage().checkTextOfShoppingCart(1,"3 Tier Corner Shelves");
-        Assert.assertTrue(condition1);
+		// 3.Click the shoppingCart button
+		pages.getTargetMarketHomePage().clickCartButton();
 
-        boolean condition2 = pages.getFurniturePage().checkTextOfShoppingCart(2,"Sofa for Coffe Cafe");
-        Assert.assertTrue(condition2);
+		// 4.Get the name's of products in oreder
+		// 5.Verify that all products added to Shopping card in order
+		boolean condition1 = pages.getFurniturePage().checkTextOfShoppingCart(1, "3 Tier Corner Shelves");
+		Assert.assertTrue(condition1);
 
-        boolean condition3 = pages.getFurniturePage().checkTextOfShoppingCart(3,"Mornadi Velvet Bed");
-        Assert.assertTrue(condition3);
-    }
+		boolean condition2 = pages.getFurniturePage().checkTextOfShoppingCart(2, "Sofa for Coffe Cafe");
+		Assert.assertTrue(condition2);
+
+		boolean condition3 = pages.getFurniturePage().checkTextOfShoppingCart(3, "Mornadi Velvet Bed");
+		Assert.assertTrue(condition3);
+	}
+
 }
